@@ -13,7 +13,7 @@ $ npm install --global dev-null-cli
 ## Usage
 
 ```
-$ dev-null-cli --help
+$ dev-null --help
 
   Examples
     $ dev-null | cat
