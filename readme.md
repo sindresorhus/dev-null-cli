@@ -1,4 +1,4 @@
-# dev-null-cli [![Build Status](https://travis-ci.com/sindresorhus/dev-null-cli.svg?branch=master)](https://travis-ci.com/sindresorhus/dev-null-cli)
+# dev-null-cli
 
 > Cross-platform [`/dev/null`](https://en.wikipedia.org/wiki/Null_device)
 
