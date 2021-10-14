@@ -1,6 +1,6 @@
 {
 	"name": "dev-null-cli",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Cross-platform `/dev/null`",
 	"license": "MIT",
 	"repository": "sindresorhus/dev-null-cli",
