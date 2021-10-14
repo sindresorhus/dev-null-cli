@@ -4,16 +4,18 @@
 	"description": "Cross-platform `/dev/null`",
 	"license": "MIT",
 	"repository": "sindresorhus/dev-null-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
 	"bin": {
-		"dev-null": "cli.js"
+		"dev-null": "./cli.js"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -34,12 +36,12 @@
 		"noop"
 	],
 	"dependencies": {
-		"meow": "^5.0.0",
-		"noop-stream": "^0.1.0"
+		"meow": "^10.1.1",
+		"noop-stream": "^1.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"execa": "^1.0.0",
-		"xo": "^0.24.0"
+		"ava": "^3.15.0",
+		"execa": "^5.1.1",
+		"xo": "^0.45.0"
 	}
 }

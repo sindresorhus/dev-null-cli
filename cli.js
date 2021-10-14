@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-'use strict';
-const {promisify} = require('util');
-const stream = require('stream');
-const meow = require('meow');
-const {readableNoopStream, writableNoopStream} = require('noop-stream');
+import {promisify} from 'node:util';
+import stream from 'node:stream';
+import process from 'node:process';
+import meow from 'meow';
+import {readableNoopStream, writableNoopStream} from 'noop-stream';
 
 const streamPipeline = promisify(stream.pipeline);
 
@@ -11,12 +11,14 @@ meow(`
 	Examples
 	  $ dev-null | cat
 	  $ echo '🦄' | dev-null
-`);
+`, {
+	importMeta: import.meta,
+});
 
 (async () => {
-	if (process.stdin.isTTY) {
-		await streamPipeline(readableNoopStream(), process.stdout);
-	} else {
-		await streamPipeline(process.stdin, writableNoopStream());
-	}
+	const promise = process.stdin.isTTY
+		? streamPipeline(readableNoopStream(), process.stdout)
+		: streamPipeline(process.stdin, writableNoopStream());
+
+	await promise;
 })();

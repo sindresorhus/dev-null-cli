@@ -2,13 +2,11 @@
 
 > Cross-platform [`/dev/null`](https://en.wikipedia.org/wiki/Null_device)
 
-
 ## Install
 
+```sh
+npm install --global dev-null-cli
 ```
-$ npm install --global dev-null-cli
-```
-
 
 ## Usage
 
@@ -19,7 +17,6 @@ $ dev-null --help
     $ dev-null | cat
     $ echo '🦄' | dev-null
 ```
-
 
 ## Related
 
